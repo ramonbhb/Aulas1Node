@@ -2,13 +2,30 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const usuarios = [
+    {
+        nome: "Joao",
+        idade: 18
+    },
+    {
+        nome: "Ana",
+        idade: 18
+    },
+    {
+        nome: "Maria",
+        idade: 18
+    }
+];
+
+//let usuarios;
+//* POST, PUT, DELETE UPDATE. Pesquisar por Métodos HTTP's.
+
+
 /* PRAZER EU SOU UMA ROTA */
 app.get('/', (req, res) => {
   res.statusCode = 200;  
 
-  /*
-  faço todo processamento  */
-
+  /*  faço todo processamento  */
   res.json({
         rota: "principal",
         nivel: "iniciante",
@@ -16,22 +33,7 @@ app.get('/', (req, res) => {
     })    
 })
 
-app.get('/usuarios', (req,res) => {
-    let usuarios = [
-        {
-            nome: "Joao",
-            idade: 18
-        },
-        {
-            nome: "Ana",
-            idade: 18
-        },
-        {
-            nome: "Maria",
-            idade:18
-        }
-    ];
-    //let usuarios;
+app.get('/usuarios', (req,res) => {   
     if (usuarios) {
         res.status = 200;
         res.json(usuarios);
@@ -43,16 +45,15 @@ app.get('/usuarios', (req,res) => {
             "msg": "Não existem usuários",
             usuarios: []
         })
-    }
-        
+    }        
 })
 
 app.get('/usuario/:id', (req,res) => {
     // bind
+    let idUser = req.params.id;
+  //  let dados = bancoDeDadosGetDados(idUser);
     res.statusCode = 200;
-    res.send({
-        "id": req.params.id
-    })
+    res.send(dados)
 });
 
 app.get('/times', (req,res) => {

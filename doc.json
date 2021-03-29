@@ -1,0 +1,23 @@
+[
+    {
+        "foto": "https://www.imagem.com/carrinhodebebe.jpg",
+        "descricao": "Carrinho de Passeio -Delta -Preto - Voyage",
+        "avaliacao": null,
+        "preco_antigo": 539.00,
+        "preco_novo": 485.10,
+        "pagamento": 1,
+        "desconto": "10%",
+        "promocao": true
+        
+    },
+    {
+        "foto": "https://www.imagem.com/caixadebombom.jpg",
+        "descricao": "Caixa de Bombom Garoto - 250g",
+        "avaliacao": 4,
+        "preco_antigo": 9.99,
+        "preco_novo": 9.99,
+        "pagamento": 1,
+        "desconto": "Oferta do dia",
+        "promocao": false    
+    }
+]
